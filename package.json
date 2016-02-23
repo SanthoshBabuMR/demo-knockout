@@ -1,0 +1,24 @@
+{
+  "name": "demo-knockout",
+  "version": "0.0.1",
+  "description": "Demonstrating Knockout Capabilities",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "hapi": "^12.1.0",
+    "inert": "^3.2.0"
+  },
+  "engines": {
+    "node": "4.1.1",
+    "npm": "2.14.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/html5webster/demo-knockout"
+  },
+  "keywords": [],
+  "license": "MIT",
+  "devDependencies": {}
+}

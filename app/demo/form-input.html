@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Form input</title>
+		<!-- css begin -->
+		<link rel="stylesheet" type="text/css" href="/css/render.css">
+		<!-- css end -->
+	</head>
+	<body>
+
+		<!-- doc-wrap begin -->
+		<div class="doc-wrap">
+			<nav class="site-navigation">
+				<ul class="flat-list clrft">
+					<li>
+						<a href="/index.html">home</a>
+					</li>
+				</ul>
+			</nav>
+			<section class="page-content">
+				<h1 class="page-heading">Form input demo</h1>
+
+				<div data-bind=" template: { name: 'form-input', data: { value: userName, label: 'Name', placeholder: 'Enter your name', name: 'userName', maxlength: 20  } }"></div>
+				<p>
+					you've entered: <span>{{$data.userName}}</span>
+				</p>
+				<hr />
+				<p>
+					<strong>Note:</strong>
+				</p>
+				<ol>
+					<li>
+						Use's 'knockout-amd-helpers' plugin to override ko's default 'template' binding	
+					</li>
+					<li>
+						Use's 'knockout-punches' plugin for binding syntaxes i.e. &#123;&#123; &#125;&#125;. provides alternative to text binding.
+					</li>
+					<li>
+						Input element's attribute values are passed to the template using 'data' property of 'template' binding
+					</li>
+					<li>
+						The form input template is loaded using 'knockout-amd-helpers' plugin which inturn uses require's text plugin for handling xhr.
+					</li>
+				</ul>
+			</section>			
+		</div>
+		<!-- doc-wrap end -->
+
+		<!-- script begin -->
+		<script src="../script/vendor/require.js"></script>
+		<script src="../script/module/form-input.js"></script>
+		<!-- script end -->
+	</body>
+</html>
