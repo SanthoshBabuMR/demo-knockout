@@ -1,0 +1,7 @@
+
+<label data-bind="text: $data.label, attr: {for: $data.name}"> </label>
+
+<span data-bind="foreach: options">
+	<input type="radio" class="ns-form-radio" data-bind=" checked:$parent.value, checkedValue: $data.value, attr: { disabled: $parent.disabled, name: $parent.name } " />
+	<label data-bind="text: $data.label"></label>
+</span>

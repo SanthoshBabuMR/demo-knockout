@@ -1,9 +1,7 @@
-define(['knockout', 'ko-amd-helpers', 'ko-punches'], function(ko) {
+define(['knockout', 'ko-amd-helpers'], function(ko) {
 
-  ko.amdTemplateEngine.defaultPath = "../templates";
-  ko.amdTemplateEngine.defaultSuffix = ".tmpl.html";
-  ko.amdTemplateEngine.defaultRequireTextPluginName = "text";
-
-  ko.punches.enableAll();
+  ko.amdTemplateEngine.defaultPath                   = "../../templates";
+  ko.amdTemplateEngine.defaultSuffix                 = ".tmpl.html";
+  ko.amdTemplateEngine.defaultRequireTextPluginName  = "text";  
 
 });

@@ -1,11 +1,11 @@
 require.config({
   paths: {
-   'knockout'            : '../script/vendor/knockout-3.4.0',
-   'ko-amd-helpers'      : '../script/vendor/knockout-amd-helpers.min',
-   'ko-punches'          : '../script/vendor/knockout.punches.min',
-   'require'             : '../script/vendor/require',
-   'text'                : '../script/vendor/text',
+   'knockout'            : '../vendor/knockout-3.4.0',
+   'ko-amd-helpers'      : '../vendor/knockout-amd-helpers.min',
+   'ko-punches'          : '../vendor/knockout.punches.min',
+   'require'             : '../vendor/require',
+   'text'                : '../vendor/text',
 
-   'ko-config'           : '../script/config/ko'
+   'ko-config'           : '../config/ko'
   }
 });
