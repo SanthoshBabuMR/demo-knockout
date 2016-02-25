@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Form checkbox</title>
+    <!-- css begin -->
+    <link rel="stylesheet" type="text/css" href="/css/render.css">
+    <!-- css end -->
+  </head>
+  <body>
+
+    <!-- doc-wrap begin -->
+    <div class="doc-wrap">
+      <nav class="site-navigation">
+        <ul class="flat-list clrft">
+          <li>
+            <a href="/index.html">Home</a>
+          </li>
+        </ul>
+      </nav>
+      <section class="page-content">
+        <h1 class="page-heading">Form checkbox demo</h1>
+
+        <div data-bind="template:{name:'form-checkbox',data:{label: 'Interested in colors?', value: $data.interestedInColors, name: 'interestedInColors', options:[{label:'Yes', value:true,name:'interestedInColors'}]}}"></div>        
+        <br />
+        <div data-bind="template:{name:'form-checkbox',data:{label: 'What are your favorite colors?', value: $data.favoriteColor, name: 'favoriteColor', disable: !($data.interestedInColors()), options:[{label:'red', value:'RED',name:'favoriteColor00'},{label:'blue', value:'BLUE',name:'favoriteColor01'},{label:'green', value:'GREEN',name:'favoriteColor02'},{label:'yellow', value:'YELLOW',name:'favoriteColor03'},{label:'pink', value:'PINK',name:'favoriteColor04'},{label:'violet', value:'VIOLET',name:'favoriteColor05'}]}}"></div>
+        <p data-bind="visible: $data.interestedInColors()">
+          you are favorite colors: <span data-bind="text:$data.favoriteColor"></span>
+        </p>
+        <hr />
+      </section>      
+    </div>
+    <!-- doc-wrap end -->
+
+    <!-- script begin -->
+    <script data-main="../script/module/form-checkbox.js" src="../script/vendor/require.js"></script>
+    <!-- script end -->
+  </body>
+</html>

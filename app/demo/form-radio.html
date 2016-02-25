@@ -22,18 +22,18 @@
       <section class="page-content">
         <h1 class="page-heading">Form radio demo</h1>
 
-        <div data-bind="template:{name: 'form-radio', data:{name: 'likeChocolate', label: 'Do you like chocolates?', value: likeChocolate, options: [{label: 'Yes', value: 'Yep.. I do'},{label: 'No',value: 'Nope'},{label: 'NA', value: 'Yet to try out chocoloates'}]}}"></div>
+        <div data-bind="template:{name: 'form-radio', data:{name: 'likeChocolate', label: 'Do you like chocolates?', value: likeChocolate, options: [{label: 'Yes', value: 'Yep.. I do', id:'likeChocolate00'},{label: 'No',value: 'Nope', id:'likeChocolate01'},{label: 'NA', value: 'Yet to try out chocoloates', id:'likeChocolate02'}]}}"></div>
         <p>
           you've entered: <span data-bind="text: $data.likeChocolate"></span>
         </p>
         
         <hr />
 
-        <div data-bind="template:{name: 'form-radio', data:{name: 'voterAge', label: 'Are you 18 years old?', value: voterAge, options: [{label: 'Yes', value: true},{label: 'No',value: false}]}}"></div>
+        <div data-bind="template:{name: 'form-radio', data:{name: 'voterAge', label: 'Are you 18 years old?', value: voterAge, options: [{label: 'Yes', value: true, id:'voterAge01'},{label: 'No',value: false, id:'voterAge02'}]}}"></div>
 
         <br />
 
-        <div data-bind="template:{name: 'form-radio', data:{name: 'voteFor', label: 'Cast your vote: ', value: voteFor, disabled: ($data.voterAge() !== true), options: [{label: 'Blue', value: 'Trust'},{label: 'Red', value: 'Energy'},{label: 'Pink', value: 'Compassion'},{label: 'Yellow', value: 'Creativity'},]}}"></div>
+        <div data-bind="template:{name: 'form-radio', data:{name: 'voteFor', label: 'Cast your vote: ', value: voteFor, disabled: ($data.voterAge() !== true), options: [{label: 'Blue', value: 'Trust', id:'voteFor00'},{label: 'Red', value: 'Energy', id:'voteFor01'},{label: 'Pink', value: 'Compassion', id:'voteFor02'},{label: 'Yellow', value: 'Creativity', id:'voteFor03'},]}}"></div>
 
         <p data-bind="visible: $data.voterAge() !== undefined">
           <span> You are <span data-bind="visible: $data.voterAge() === false">not</span> 18 years old <span data-bind="visible: $data.voterAge() === true && $data.voteFor() !== undefined">and you've cast your vote for <span data-bind="text: $data.voteFor"></span></span></span>

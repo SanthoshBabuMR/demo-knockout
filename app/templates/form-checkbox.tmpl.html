@@ -1,0 +1,6 @@
+<label data-bind="text:$data.label, attr:{name: $data.name}"></label>
+
+<span data-bind="foreach:options">
+  <input type="checkbox" data-bind="checked: $parent.value, checkedValue: $data.value, attr:{ name: $data.name, id: $data.name, disabled: $parent.disable }" />
+  <label data-bind="text:$data.label, attr:{for: $data.name}"></label>  
+</span>
