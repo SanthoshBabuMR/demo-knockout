@@ -29,10 +29,10 @@ define( ['jquery'], function($){
 
   $.fn.dropdown = function(method) {
     if(methods[method]) {
-      methods[method].apply(this, Array.prototype.slice.call(arguments,1));
+      return methods[method].apply(this, Array.prototype.slice.call(arguments,1));
     }
     else if( typeof method === "object" || !method ) {
-      methods.init.apply(this, arguments);
+      return methods.init.apply(this, arguments);
     }
     else {
       $.error("Method " + method + " doesn't exist on $.dropdown");
