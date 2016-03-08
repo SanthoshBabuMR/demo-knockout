@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Form input placeholder</title>
+    <!-- css begin -->
+    <link rel="stylesheet" type="text/css" href="/css/render.css">
+    <style type="text/css">
+    ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+      color: #ff0000;
+    }
+    :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+      color: #ff0000;
+    }
+    ::-moz-placeholder { /* Mozilla Firefox 19+ */
+       color: #ff0000;
+    }
+    :-ms-input-placeholder { /* Internet Explorer 10-11 */
+       color: #ff0000;
+    }
+    :placeholder-shown { /* Standard (https://drafts.csswg.org/selectors-4/#placeholder) */
+      color: #ff0000;
+    }
+    .placeholder {
+      color: #ff0000;
+    }
+    </style>
+    <!-- css end -->
+  </head>
+  <body>
+
+    <!-- doc-wrap begin -->
+    <div class="doc-wrap">
+      <nav class="site-navigation">
+        <ul class="flat-list clrft">
+          <li>
+            <a href="/index.html">Home</a>
+          </li>
+        </ul>
+      </nav>
+      <section class="page-content">
+        <h1 class="page-heading">Form input placeholder demo</h1>
+
+        <form name="ph-input-form" id="phInputForm" method="#" action="#">
+          
+          <input class="ns-form-input" data-bind="value: $data.interimUserName, placeholderBinding: true, valueUpdate: 'change' " placeholder='Enter Name' />
+          <br /><br />
+          <input type="submit" value="submit" />
+        </form>
+
+        <p>
+          you've entered: <span data-bind="text:$data.userName"></span>
+        </p>
+        <hr />
+      </section>      
+    </div>
+    <!-- doc-wrap end -->
+
+    <!-- script begin -->
+    <script data-main="../script/module/form-input-placeholder.js" src="../script/vendor/require.js"></script>
+    <!-- script end -->
+  </body>
+</html>

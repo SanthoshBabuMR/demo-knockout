@@ -1,4 +1,4 @@
 
 <label data-bind="text: $data.label, attr: {for: $data.name}"></label>
 
-<input class="ns-form-input" data-bind=" textInput: $data.value, attr: { id: $data.name, name: $data.name, placeholder: $data.placeholder, maxlength: $data.maxlength } " />
+<input class="ns-form-input" data-bind="textInput: $data.value, placeholderBinding: true, attr: { id: $data.name, name: $data.name, placeholder: $data.placeholder, maxlength: $data.maxlength }" />
